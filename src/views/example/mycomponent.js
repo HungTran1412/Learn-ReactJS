@@ -12,7 +12,7 @@ class MyComponent extends React.Component {
     */
     render() {
 
-        let name = 'Mhung';
+        // let name = 'Mhung';
 
         return (
             // <React.Fragment>
