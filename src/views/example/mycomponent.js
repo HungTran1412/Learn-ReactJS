@@ -3,25 +3,27 @@ import React from "react";
 class MyComponent extends React.Component {
 
     state = {
-        name: '',
-        ex: 'Atoets'
+        firstName: '',
+        lastName: ''
     }
 
-    handleOnChangeName = (event) =>{
-        // console.log(event.target.value, 'event target: ', event.target, 'event object: ', event)
-
-        // this.state.name = event.target.value; //không nên dùng
-
+    handleChangeFirstName = (event) => {
         this.setState({
-            name: event.target.value,
-            ex: 'at'
+            firstName: event.target.value
         })
     }
 
-    handleClickButton = () =>{
-        alert('click me')
+    handleChangeLastName = (event) => {
+        this.setState({
+            lastName: event.target.value
+        })
     }
- 
+
+    handleSubmit = (event) =>{
+        event.preventDefault()
+          console.log('>>> check data input: ', this.state)
+    }
+
     /*
     JSX =>
     */
@@ -32,18 +34,18 @@ class MyComponent extends React.Component {
         return (
             // <React.Fragment>
             <>
-                <div className="1">
-                    <input value={this.state.name} type="text"
-                        onChange={(event) => this.handleOnChangeName(event)}
+                <form action="/action_page.php">
+                    <label htmlFor="fname">First name:</label><br />
+                    <input type="text" value={this.state.firstName} onChange={(event) => this.handleChangeFirstName(event)} /><br />
+
+                    <label htmlFor="lname">Last name:</label><br />
+                    <input type="text" value={this.state.value} onChange={this.handleChangeLastName}/><br /><br />
+
+                    <input type="submit"
+                    
+                    onClick={(event)=>this.handleSubmit(event)}
                     />
-                    Hello my Component, my name is {this.state.name}
-                </div>
-                <div className="2">
-                    My ex: {this.state['ex']}
-                </div>
-                <div className="3">
-                    <button onClick={this.handleClickButton}>Click me </button>
-                </div>
+                </form>
             </>
             // </React.Fragment>
         )
