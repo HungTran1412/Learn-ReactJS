@@ -7,10 +7,10 @@ class MyComponent extends React.Component {
     state = {
         firstName: '',
         lastName: '',
-        arrJobs:[
-            {id: 'job01', title: 'developer', salary: '500$'},
-            {id: 'job02', title: 'tester', salary: '500$'},
-            {id: 'job03', title: 'devops', salary: '500$'}
+        arrJobs: [
+            { id: 'job01', title: 'developer', salary: '500$' },
+            { id: 'job02', title: 'tester', salary: '500$' },
+            { id: 'job03', title: 'devops', salary: '500$' }
         ]
     }
 
