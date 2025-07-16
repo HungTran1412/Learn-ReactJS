@@ -6,7 +6,7 @@ import MyComponent from './example/mycomponent';
  * 2 components: class component / function component (function, arrow)
  */
 
-function App(){
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,7 +14,9 @@ function App(){
         <p>
           Hello world!
         </p>
-        <MyComponent/>
+
+        <MyComponent />
+
       </header>
     </div>
   );
