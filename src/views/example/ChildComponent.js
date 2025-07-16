@@ -19,9 +19,9 @@ class ChildComponent extends React.Component {
         })
     }
 
-    handleSubmit = (event) =>{
+    handleSubmit = (event) => {
         event.preventDefault()
-          console.log('>>> check data input: ', this.state)
+        console.log('>>> check data input: ', this.state)
     }
 
     /*
@@ -29,17 +29,28 @@ class ChildComponent extends React.Component {
     */
     render() {
         console.log('>>> check props: ', this.props)
-        
+
         // let name = this.props.name;
         // let age = this.props.age;
 
-        let {name, age} = this.props; //rút gọn
+        let { name, age, address, arrJobs } = this.props; //rút gọn
+
+        let a ='';
 
         return (
             // <React.Fragment>
             <>
-                <div>
-                    Child component name: {name} -  {age}
+                <div className="jobLists">
+                    {
+                        a = arrJobs.map((item, index) => {
+                            return (
+                                <div key={item.id}>
+                                    {item.title} - {item.salary}
+                                </div>
+                            )
+                        })
+                    }
+                    {console.log('>>> Check map array: ', a)}
                 </div>
             </>
             // </React.Fragment>
