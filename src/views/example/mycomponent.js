@@ -21,9 +21,9 @@ class MyComponent extends React.Component {
         })
     }
 
-    handleSubmit = (event) =>{
+    handleSubmit = (event) => {
         event.preventDefault()
-          console.log('>>> check data input: ', this.state)
+        console.log('>>> check data input: ', this.state)
     }
 
     /*
@@ -41,17 +41,18 @@ class MyComponent extends React.Component {
                     <input type="text" value={this.state.firstName} onChange={(event) => this.handleChangeFirstName(event)} /><br />
 
                     <label htmlFor="lname">Last name:</label><br />
-                    <input type="text" value={this.state.value} onChange={this.handleChangeLastName}/><br /><br />
+                    <input type="text" value={this.state.value} onChange={this.handleChangeLastName} /><br /><br />
 
                     <input type="submit"
-                    
-                    onClick={(event)=>this.handleSubmit(event)}
+
+                        onClick={(event) => this.handleSubmit(event)}
                     />
                 </form>
 
-                <ChildComponent name={'child one'}/>
-                <ChildComponent name={'child two'}/>
-                <ChildComponent name={'child three'}/>
+                <ChildComponent
+                    name={'angtuyt'} 
+                    age={'20'}
+                />
             </>
             // </React.Fragment>
         )

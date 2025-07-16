@@ -28,14 +28,18 @@ class ChildComponent extends React.Component {
     JSX =>
     */
     render() {
-        console.log('>>> call render: ', this.state)
-        // let name = 'Mhung';
+        console.log('>>> check props: ', this.props)
+        
+        // let name = this.props.name;
+        // let age = this.props.age;
+
+        let {name, age} = this.props; //rút gọn
 
         return (
             // <React.Fragment>
             <>
                 <div>
-                    ChildComponent: {this.props.name}
+                    Child component name: {name} -  {age}
                 </div>
             </>
             // </React.Fragment>
